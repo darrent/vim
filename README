@@ -1,0 +1,17 @@
+Installation
+
+git clone git@github.com:darrent/winvim.git
+
+del _vimrc
+
+mklink _vimrc winvim\_vimrc
+mklink _gvimrc winvim\_gvimrc
+mklink /D vimfiles winvim
+
+Adding submodules
+
+git submodule add [gitpath] bundle/[plugin-name]
+
+Updating submodules
+
+git submodule update
