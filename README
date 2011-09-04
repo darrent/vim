@@ -8,10 +8,21 @@ mklink _vimrc winvim\_vimrc
 mklink _gvimrc winvim\_gvimrc
 mklink /D vimfiles winvim
 
+cd winvim
+
+git submodule init
+git submodule update
+
 Adding submodules
 
 git submodule add [gitpath] bundle/[plugin-name]
 
 Updating submodules
 
-git submodule update
+cd bundle/[plugin-name]
+git pull origin master
+
+
+Updateing all submodule
+
+git submodule foreach git pull origin master
