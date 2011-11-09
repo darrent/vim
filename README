@@ -23,11 +23,19 @@ Adding submodules
 git submodule add [gitpath] bundle/[plugin-name]
 
 Updating submodules
+===================
 
 cd bundle/[plugin-name]
 git pull origin master
 
-
 Updating all submodules
 =======================
 git submodule foreach git pull origin master
+
+Removing a submodule
+====================
+Delete the line from the .gitmodules file
+Remove the relevant section from .git/config
+Run git rm --cached [path_to_submodule]
+Remove the folder
+commit
