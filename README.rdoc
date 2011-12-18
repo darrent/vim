@@ -1,5 +1,7 @@
 = Installation
 
+== Windows 
+
 1) Make sure there isn't a vimfiles directory (this is an option when installing Vim).
 2) Navigate to the vim directory in Program Files.
 
@@ -17,9 +19,15 @@
  # git submodule init
  # git submodule update
 
+== Mac
+
+ # ln -nfs ~/bin/vim/ .vim
+ # ln -nfs ~/bin/vim/_vimrc .vimrc 
+ # ln -nfs ~/bin/vim/_gvimrc .gvimrc 
+
 == Adding submodules
 
- # it submodule add [gitpath] bundle/[plugin-name]
+ # git submodule add [gitpath] bundle/[plugin-name]
 
 == Updating submodules
 
