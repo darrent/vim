@@ -3,36 +3,36 @@
 1) Make sure there isn't a vimfiles directory (this is an option when installing Vim).
 2) Navigate to the vim directory in Program Files.
 
-# del _vimrc
+ # del _vimrc
  # Clone this repository somewhere on your hard drive. 
 
-# mklink _vimrc winvim\_vimrc
-# mklink _gvimrc winvim\_gvimrc
-# mklink /D vimfiles winvim
+ # mklink _vimrc winvim\_vimrc
+ # mklink _gvimrc winvim\_gvimrc
+ # mklink /D vimfiles winvim
 
-# git clone git@github.com:darrent/winvim.git winvim
+ # git clone git@github.com:darrent/winvim.git winvim
 
-# cd winvim
+ # cd winvim
 
-# git submodule init
-# git submodule update
+ # git submodule init
+ # git submodule update
 
 == Adding submodules
 
-git submodule add [gitpath] bundle/[plugin-name]
+ # it submodule add [gitpath] bundle/[plugin-name]
 
 == Updating submodules
 
-# cd bundle/[plugin-name]
-# git pull origin master
+ # cd bundle/[plugin-name]
+ # git pull origin master
 
 == Updating all submodules
-# git submodule foreach git pull origin master
+ # git submodule foreach git pull origin master
 
 == Removing a submodule
 
-# Delete the line from the .gitmodules file
-# Remove the relevant section from .git/config
-# Run git rm --cached [path_to_submodule]
-# Remove the folder
-# commit
+ # Delete the line from the .gitmodules file
+ # Remove the relevant section from .git/config
+ # Run git rm --cached [path_to_submodule]
+ # Remove the folder
+ # commit
