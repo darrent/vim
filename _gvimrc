@@ -20,5 +20,5 @@ set guioptions-=m						" Don't show the menubar
 set guioptions-=L						
 set guioptions-=r					
 
-set guifont=Consolas:h14
+set guifont=Monaco:h16
 set antialias
