@@ -4,6 +4,7 @@
 2) Navigate to the vim directory in Program Files.
 
 # del _vimrc
+ # Clone this repository somewhere on your hard drive. 
 
 # mklink _vimrc winvim\_vimrc
 # mklink _gvimrc winvim\_gvimrc
