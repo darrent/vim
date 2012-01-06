@@ -21,9 +21,15 @@
 
 == Mac
 
+ # navigate to the ~/bin directory (or create if it doesn't exist)
+ # git clone [PATH] vim
+
  # ln -nfs ~/bin/vim/ .vim
  # ln -nfs ~/bin/vim/_vimrc .vimrc 
  # ln -nfs ~/bin/vim/_gvimrc .gvimrc 
+
+ # git submodule init
+ # git submodule update
 
 == Adding submodules
 
