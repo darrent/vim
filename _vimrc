@@ -61,8 +61,8 @@ set nowritebackup 					                " And again.
 " COLOURS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-colorscheme wombat256
 syntax enable 							                " Turn on syntax highlighting.
+colorscheme wombat256
 filetype plugin indent on 	                " Turn on file type detection.
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
