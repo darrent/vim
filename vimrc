@@ -38,6 +38,11 @@ map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
 map <Leader>so :so %<cr>
 
+map <C-s> <esc>:w<CR>
+imap <C-s> <esc>:w<CR>
+map <C-n> :cn<CR>
+map <C-p> :cp<CR>
+
 map <Leader>x :NERDTree<CR>
 
 " Bubble single lines
@@ -99,6 +104,12 @@ set incsearch
 set hlsearch 								       
 set ignorecase							              
 set infercase	
+set vb t_vb="
 
 set background=dark
 colorscheme solarized
+
+highlight StatusLine ctermfg=blue ctermbg=yellow
+
+" Format xml files
+au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null" 
