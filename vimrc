@@ -28,6 +28,8 @@ Bundle 'railscasts'
 
 let mapleader = ","
 
+nnoremap ; :
+
 map <Leader>i mmgg=G`m<CR>
 
 " Bundle 
@@ -54,6 +56,9 @@ imap <C-s> <esc>:w<CR>
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
 
+" Search
+nmap <silent> ,/ :nohlsearch<CR>
+
 " NerdTree
 
 map <Leader>x :NERDTree<CR>
@@ -70,8 +75,16 @@ nmap <D-[> <<
 vmap <D-]> >gv
 vmap <D-[> <gv
 
+" Stop using those arrow keys!
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
 " Disable Ex mode
 map Q <Nop>
+
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
 
 set tags=./tags;
 
@@ -90,6 +103,7 @@ set ttimeoutlen=1
 set ruler                                   " Show cursor position.
 set number 									                " Show line numbers.
 set showcmd 								                " Display incomplete commands.
+set title
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BEHAVIOR
@@ -98,6 +112,7 @@ set autoread                                " Check for files changes outside VI
 set noautowrite
 set visualbell	                            " Use a visual bell instead of beeping
 set showmode 					                      " Display the mode you're in.
+set showmatch
 filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -120,7 +135,6 @@ set incsearch 			                        " Highlight matches as you type.
 set hlsearch 					                      " Highlight matches.
 set ignorecase				                      " Ignore case when searching
 set infercase					 
-set nohlsearch
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BUFFERS
@@ -143,7 +157,7 @@ set wildmode=list:longest 	                " Complete files like a shell.
 syntax on
 syntax enable
 set background=dark
-"colorscheme railscasts
+colorscheme Railscasts
 
 highlight StatusLine ctermfg=blue ctermbg=yellow
 
