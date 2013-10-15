@@ -15,8 +15,8 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'wincent/Command-T'
 Bundle 'The-NERD-Commenter'
+Bundle 'The-NERD-tree'
 Bundle 'altercation/vim-colors-solarized.git'
-
 
 let mapleader = ","
 " Formatting
@@ -37,6 +37,8 @@ map <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
 map <Leader>so :so %<cr>
+
+map <Leader>x :NERDTree<CR>
 
 " Bubble single lines
 nmap <D-Up> [e
@@ -89,11 +91,14 @@ set guioptions-=T
 set et
 set sw=2
 set smarttab
-set noincsearch
 set ignorecase smartcase
 set laststatus=2  " Always show status line.
 set gdefault " assume the /g flag on :s substitutions to replace all matches in a line
 set autoindent " always set autoindenting on
+set incsearch 							                
+set hlsearch 								       
+set ignorecase							              
+set infercase	
 
 set background=dark
 colorscheme solarized
