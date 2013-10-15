@@ -20,7 +20,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'wincent/Command-T'
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
-Bundle 'altercation/vim-colors-solarized.git'
+Bundle 'railscasts'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key Mappings
@@ -134,7 +134,6 @@ set tabstop=2 				                      " Global tab width.
 set shiftwidth=2 			                      " And again, related.
 set expandtab		                            " expand <Tab> to spaces in Insert mode
 set encoding=utf-8			                    " Use UTF-8 everywhere.
-set nowrap				                          " Disable word wrap
 set wildmenu 				                        " Enhanced command line completion.
 set wildmode=list:longest 	                " Complete files like a shell.
 
@@ -144,7 +143,7 @@ set wildmode=list:longest 	                " Complete files like a shell.
 syntax on
 syntax enable
 set background=dark
-colorscheme solarized
+"colorscheme railscasts
 
 highlight StatusLine ctermfg=blue ctermbg=yellow
 
