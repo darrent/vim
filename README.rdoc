@@ -1,7 +1,9 @@
 = Installation
 
 git clone git@github.com:darrent/vim.git vim
+
 cd ~/vim
+
 rake
 
 Vim plugins are managed through vundle. You'll need to install vundle to get them.
