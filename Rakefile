@@ -3,7 +3,7 @@ require 'rake'
 task :default => [:install]
 
 desc "Install vim files into user's home directory"
-task :install => [:link, :initialise] do
+task :install => [:link] do
 end
 
 desc "Links vim rc files"
@@ -11,12 +11,6 @@ task :link do
 
   link_folder 'vim'
   ['vimrc', 'gvimrc' ].each { |link| link_file link  }
-end
-
-desc "initialise git submodules"
-task :initialise do
-  sh 'git submodule init'
-  sh 'git submodule update'
 end
 
 desc "Remove links"
