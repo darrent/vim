@@ -32,5 +32,5 @@ end
 
 def unlink(link)
   puts "unlinking link ~/.#{link}"
-  system %Q{rm "$HOME/.#{link}"} if File.exist?('$HOME/.#{link}')
+  system %Q{rm "$HOME/.#{link}"}
 end
