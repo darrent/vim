@@ -4,8 +4,9 @@ call pathogen#infect()
 
 set nocompatible                            " Must come first because it changes other options.
 set autochdir
-set nostartofline 							            " don't jump to the first character when paging
-set title                   		            " Set the terminal's title
+set nostartofline 							" don't jump to the first character when paging
+set title                   		        " Set the terminal's title
+
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
@@ -13,14 +14,14 @@ behave mswin
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DISPLAY
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set ruler 									                " Show cursor position.
-set number 									                " Show line numbers.
-set showcmd 								                " Display incomplete commands.
+set ruler 									" Show cursor position.
+set number 									" Show line numbers.
+set showcmd 								" Display incomplete commands.
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set laststatus=2					                  " Show the status line all the time
+set laststatus=2					        " Show the status line all the time
 set statusline+=\ %{fugitive#statusline()}  " Fugitive status line
 set statusline+=\ (%n)                      " buffer number
 set statusline+=\ %([%M%R%H%W]\ %)          " Modified, Read-only, Help, and Preview flags
@@ -77,23 +78,18 @@ set fillchars+=fold:\
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TEXT EDITING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set tabstop=2 							                " Global tab width.
-set shiftwidth=2 						                " And again, related.
-set expandtab								                " expand <Tab> to spaces in Insert mode
-set encoding=utf-8					                " Use UTF-8 everywhere.
-set nowrap									                " Disable word wrap
-set wildmenu 								                " Enhanced command line completion.
-set wildmode=list:longest 	                " Complete files like a shell.
-set tabstop=2 							                " Global tab width.
+set tabstop=2 							      " Global tab width.
+set shiftwidth=2 						      " And again, related.
+set expandtab								  " expand <Tab> to spaces in Insert mode
+set encoding=utf-8					          " Use UTF-8 everywhere.
+set nowrap									  " Disable word wrap
+set wildmenu 								  " Enhanced command line completion.
+set wildmode=list:longest 	                  " Complete files like a shell.
+set tabstop=2 							      " Global tab width.
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SPELLING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TERMINAL
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" set tty=win32
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SETTINGS PER FILETYPE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -101,14 +97,14 @@ filetype plugin on
 filetype indent on
 
 if has("autocmd")
-    autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
-    autocmd FileType yaml setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType make       setlocal ts=8 sts=8 sw=8 noexpandtab
+    autocmd FileType yaml       setlocal ts=4 sts=4 sw=4 expandtab
   
-    autocmd FileType html setlocal ts=4 sts=4 sw=4 noexpandtab
-    autocmd FileType xhtml setlocal ts=4 sts=4 sw=4 noexpandtab
-    autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType html       setlocal ts=4 sts=4 sw=4 noexpandtab
+    autocmd FileType xhtml      setlocal ts=4 sts=4 sw=4 noexpandtab
+    autocmd FileType css        setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
-    autocmd FileType cs setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType cs         setlocal ts=4 sts=4 sw=4 expandtab
     " Treat .rss files as XML
     autocmd BufNewFile,BufRead *.rss setfiletype xml
     autocmd BufNewFile,BufRead *.config setfiletype xml
@@ -187,5 +183,5 @@ nnoremap <silent> <Leader>t :TlistToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FUGITIVE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <Leader>gs :Gstatus<CR>
+map  <Leader>gs :Gstatus<CR>
 nmap <Leader>gc :Gcommit<CR>
