@@ -16,9 +16,8 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'wincent/Command-T'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'The-NERD-Commenter'
-Bundle 'Solarized'
+Bundle 'altercation/vim-colors-solarized.git'
 
-"============================
 
 let mapleader = ","
 " Formatting
