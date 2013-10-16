@@ -45,6 +45,7 @@ map <Leader>bl :buffers<CR>
 map <Leader>gs :Gstatus<CR>
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 map <Leader>gac :Gcommit -m -a ""<LEFT>
+map <leader>gd :Gdiff<CR>
 
 " Windows 
 map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
