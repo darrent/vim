@@ -126,9 +126,7 @@ set statusline=\ %{fugitive#statusline()}   " Fugitive status line
 set statusline+=\ (%n)                      " buffer number
 set statusline+=\ %([%M%R%H%W]\ %)          " Modified, Read-only, Help, and Preview flags
 set statusline+=\ %y                        " Filetype
-set statusline+=\ %l                        " Current line
-set statusline+=/                           " Separator
-set statusline+=%L                          " Total lines
+set statusline+=\ Current:\ %-4l\ Total:\ %-4L " File line numbers
 
 autocmd BufEnter * lcd %:p:h 
 " Remember where you were the last time you edited the file, and returns to the same position.
