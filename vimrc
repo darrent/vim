@@ -21,7 +21,7 @@ Bundle 'wincent/Command-T'
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'ctrlp.vim'
-Bundle 'railscasts'
+Bundle 'tomasr/molokai'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key Mappings
@@ -78,10 +78,10 @@ vmap <D-]> >gv
 vmap <D-[> <gv
 
 " Stop using those arrow keys!
-"map <up> <nop>
-"map <down> <nop>
-"map <left> <nop>
-"map <right> <nop>
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
 
 " Disable Ex mode
 map Q <Nop>
@@ -112,6 +112,7 @@ set title
 set autoread                                " Check for files changes outside VIM
 set noautowrite
 set visualbell	                            " Use a visual bell instead of beeping
+set noerrorbells
 set showmode 					                      " Display the mode you're in.
 set showmatch
 filetype plugin indent on
@@ -157,8 +158,7 @@ set wildmode=list:longest 	                " Complete files like a shell.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 syntax enable
-set background=dark
-colorscheme Railscasts
+colorscheme molokai
 
 highlight StatusLine ctermfg=blue ctermbg=yellow
 
