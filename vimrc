@@ -20,6 +20,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'wincent/Command-T'
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
+Bundle 'ctrlp.vim'
 Bundle 'railscasts'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
