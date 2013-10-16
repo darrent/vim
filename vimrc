@@ -43,6 +43,7 @@ map <Leader>bl :buffers<CR>
 " Git 
 map <Leader>gs :Gstatus<CR>
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
+map <Leader>gac :Gcommit -m -a ""<LEFT>
 
 " Windows 
 map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
@@ -51,6 +52,7 @@ map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
 " Source
 map <Leader>so :so %<cr>
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
 
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
@@ -64,10 +66,10 @@ nmap <silent> ,/ :nohlsearch<CR>
 map <Leader>x :NERDTree<CR>
 
 " Line Bubbling
-nmap <D-Up> [e
-nmap <D-Down> ]e
-vmap <D-Up> [egv
-vmap <D-Down> ]egv
+nmap <D-k> [e
+nmap <D-j> ]e
+vmap <D-k> [egv
+vmap <D-j> ]egv
 
 " Text mate style indentation
 nmap <D-]> >>
@@ -76,15 +78,14 @@ vmap <D-]> >gv
 vmap <D-[> <gv
 
 " Stop using those arrow keys!
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+"map <up> <nop>
+"map <down> <nop>
+"map <left> <nop>
+"map <right> <nop>
 
 " Disable Ex mode
 map Q <Nop>
 
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
 
 set tags=./tags;
 
