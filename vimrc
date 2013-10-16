@@ -61,7 +61,6 @@ map <C-p> :cp<CR>
 nmap <silent> ,/ :nohlsearch<CR>
 
 " NerdTree
-
 map <Leader>x :NERDTree<CR>
 
 " Line Bubbling
