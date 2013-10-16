@@ -22,6 +22,7 @@ Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'ctrlp.vim'
 Bundle 'tomasr/molokai'
+Bundle 'Syntastic'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key Mappings
@@ -109,22 +110,25 @@ set title
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BEHAVIOR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype plugin indent on
 set autoread                                " Check for files changes outside VIM
 set noautowrite
 set visualbell	                            " Use a visual bell instead of beeping
 set noerrorbells
 set showmode 					                      " Display the mode you're in.
 set showmatch
-filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2					                  " Show the status line all the time
-set statusline+=\ %{fugitive#statusline()}  " Fugitive status line
+set statusline=\ %{fugitive#statusline()}   " Fugitive status line
 set statusline+=\ (%n)                      " buffer number
 set statusline+=\ %([%M%R%H%W]\ %)          " Modified, Read-only, Help, and Preview flags
 set statusline+=\ %y                        " Filetype
+set statusline+=\ %l                        " Current line
+set statusline+=/                           " Separator
+set statusline+=%L                          " Total lines
 
 autocmd BufEnter * lcd %:p:h 
 " Remember where you were the last time you edited the file, and returns to the same position.
