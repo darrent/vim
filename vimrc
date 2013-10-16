@@ -25,7 +25,7 @@ Bundle 'tomasr/molokai'
 Bundle 'Syntastic'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Key Mappings
+" Key Mappings 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let mapleader = ","
@@ -33,6 +33,9 @@ let mapleader = ","
 nnoremap ; :
 
 map <Leader>i mmgg=G`m<CR>
+" Toggle show/hide invisible chars
+nnoremap <leader>i :set list!<cr>
+inoremap jj <Esc>
 
 " Bundle 
 nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
@@ -118,9 +121,12 @@ set visualbell	                            " Use a visual bell instead of beepin
 set noerrorbells
 set showmode 					                      " Display the mode you're in.
 set showmatch
-
+set mousehide                               " Hide the mouse pointer while typing
+set nobackup                                " No backups
+set noswapfile                              " Do not write annoying intermediate swap files,
+set cursorline                              " Underline the current line, for quick orientation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" STATUS LINE
+" STATUS LINE 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2					                  " Show the status line all the time
 set statusline=\ %{fugitive#statusline()}   " Fugitive status line
@@ -133,37 +139,39 @@ autocmd BufEnter * lcd %:p:h
 " Remember where you were the last time you edited the file, and returns to the same position.
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SEARCH
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set incsearch 			                        " Highlight matches as you type.
-set hlsearch 					                      " Highlight matches.
-set ignorecase				                      " Ignore case when searching
-set infercase					 
+  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  " SEARCH
+  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  set incsearch 			                        " Highlight matches as you type.
+  set hlsearch 					                      " Highlight matches.
+  set ignorecase				                      " Ignore case when searching
+  set infercase					 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" BUFFERS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set hidden                                  " Handle multiple buffers better.
+  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  " BUFFERS
+  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  set hidden                                  " Handle multiple buffers better.
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TEXT EDITING
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set tabstop=2 				                      " Global tab width.
-set shiftwidth=2 			                      " And again, related.
-set expandtab		                            " expand <Tab> to spaces in Insert mode
-set encoding=utf-8			                    " Use UTF-8 everywhere.
-set wildmenu 				                        " Enhanced command line completion.
-set wildmode=list:longest 	                " Complete files like a shell.
+  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  " TEXT EDITING
+  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  set tabstop=2 				                      " Global tab width.
+  set shiftwidth=2 			                      " And again, related.
+  set softtabstop=2
+  set expandtab		                            " expand <Tab> to spaces in Insert mode
+  set encoding=utf-8			                    " Use UTF-8 everywhere.
+  set wildmenu 				                        " Enhanced command line completion.
+  set wildmode=list:longest 	                " Complete files like a shell.
+  set autoindent 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" COLOURS
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax on
-syntax enable
-colorscheme molokai
+  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  " COLOURS
+  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  syntax on
+  syntax enable
+  colorscheme molokai
 
-highlight StatusLine ctermfg=blue ctermbg=yellow
+  highlight StatusLine ctermfg=blue ctermbg=yellow
 
-" Format xml files
-au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null" 
+  " Format xml files
+  au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null" 
