@@ -32,7 +32,6 @@ let mapleader = ","
 
 nnoremap ; :
 
-map <Leader>i mmgg=G`m<CR>
 " Toggle show/hide invisible chars
 nnoremap <leader>i :set list!<cr>
 inoremap jj <Esc>
@@ -91,6 +90,7 @@ map <right> <nop>
 " Disable Ex mode
 map Q <Nop>
 
+map <Leader>f  mzgg=G`z<CR>
 
 set tags=./tags;
 
